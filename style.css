@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+:root {
+  --navbar-height: 60px;
+}
+#navBar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 0px;
+}
+#logo {
+  margin: 10px 40px 10px 25px;
+}
+#logo img {
+  width: 45px;
+  height: 45px;
+  border: 1px solid white;
+  border-radius: 100px;
+}
+#navBar ul {
+  display: flex;
+}
+#navBar ul li {
+  list-style: none;
+  font-size: 1.2rem;
+}
+#navBar ul li a {
+  width: fit-content;
+  height: 35px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 8px 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: font-size 0.3s ease;
+}
+#navBar ul li a:hover {
+  color: rgb(255, 153, 0);
+}
+#navBar::before {
+  background-color: black;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #515151;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(255, 160, 0);
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#home {
+  height: 75vh;
+  padding: 3px 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#home::before {
+  background: url("bg1.jpeg") no-repeat center center/cover;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.8;
+}
+#home h1 {
+  color: white;
+  padding: 20px;
+}
+#home p {
+  color: white;
+  font-size: 1.4rem;
+  width: 100%;
+  line-height: 1.5;
+}
+#serv {
+  padding-top: 30px;
+  margin: 80px 20px 0 20px;
+}
+#services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#services .box {
+  width: 380px;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid rgb(255, 140, 0);
+  border-radius: 10px;
+}
+#services .box img {
+  display: block;
+  margin: auto;
+  width: 200px;
+  height: 150px;
+}
+#services .box p {
+  font-size: 17px;
+  text-align: justify;
+  font-weight: bold;
+}
+.clientSection {
+  padding-top: 30px;
+}
+#clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 10px 30px 10px;
+}
+#clients img {
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid rgb(255, 130, 0);
+  border-radius: 10px;
+  width: 280px;
+  height: 280px;
+}
+.contactSection {
+  position: relative;
+}
+.contactSection::before {
+  background: url("contact.png") no-repeat center center/cover;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.3;
+}
+.contactSection h1 {
+  padding: 50px 20px 20px 20px;
+}
+#contactBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+#contactBox input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1.5px solid white;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: transparent;
+}
+#contactBox form {
+  width: 50%;
+}
+#contactBox label {
+  font-size: 20px;
+  font-weight: bold;
+}
+.contactButtons {
+  float: right;
+  margin: 5px 0px 0px 10px;
+  width: 120px;
+  height: 35px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(255, 130, 0);
+  background-color: white;
+}
+.contactButtons:hover {
+  color: rgb(255, 160, 0);
+  background-color: #515151;
+  border-color: #515151;
+  transition: 0.3s ease;
+}
+footer {
+  padding: 20px;
+  font-size: 16px;
+  color: rgb(255, 160, 0);
+  background-color: #515151;
+}
+.h-primary {
+  font-size: 2.5rem;
+  padding: 20px;
+}
+.h-secondary {
+  font-size: 2rem;
+  padding: 15px;
+}
+.center {
+  text-align: center;
+  font-weight: bold;
+}
+.btn {
+  padding: 8px 20px;
+  border: 2px solid white;
+  background-color: rgb(255, 130, 0);
+  color: white;
+  margin: 20px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#menu {
+  display: none;
+  color: white;
+}
+@media (max-width: 880px) {
+  #logo {
+    margin: 12px 32px 8px 20px;
+  }
+  #logo img {
+    width: 36px;
+    height: 36px;
+    border: 1px solid white;
+    border-radius: 100px;
+  }
+  #navBar ul li {
+    list-style: none;
+    font-size: 1rem;
+  }
+  #home {
+    height: 80vh;
+    padding: 3px 150px;
+  }
+  #home h1 {
+    font-size: 1.75rem;
+    padding: 12px;
+  }
+  #home p {
+    font-size: 0.9rem;
+  }
+  .btn {
+    margin-top: 30px;
+    padding: 6px 16px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 650px) {
+  #home {
+    padding: 3px 100px;
+  }
+  #home h1 {
+    font-size: 1.5rem;
+    padding: 12px;
+  }
+  #home p {
+    font-size: 0.85rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+  }
+  #contactBox form {
+    width: 65%;
+  }
+}
+@media (max-width: 550px) {
+  #navBar {
+    flex-direction: column;
+  }
+  #navBar {
+    padding-bottom: 10px;
+  }
+  #home {
+    height: 70vh;
+    padding: 3px 60px;
+  }
+  footer {
+    padding: 16px;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 450px) {
+  #navBar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  #logo img {
+    margin-left: 20px;
+  }
+  #logo {
+    margin: 12px 0 8px 0;
+  }
+  .navLinks {
+    display: none;
+  }
+  #menu {
+    display: block;
+  }
+  #menu span {
+    margin-right: 20px;
+  }
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+  #home::before {
+    height: 85vh;
+  }
+  #home {
+    padding: 3px 20px;
+    height: 70vh;
+  }
+  #serv {
+    margin-top: 20px;
+  }
+  #contactBox form {
+    width: 80%;
+  }
+  #contact h1 {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 350px) {
+  #home {
+    padding: 3px 15px;
+    height: 65vh;
+  }
+  #home h1 {
+    font-size: 1.2em;
+  }
+  #home p {
+    font-size: 0.7em;
+  }
+  #home::before {
+    width: 100%;
+    height: 80vh;
+  }
+  #clients img {
+    width: 250px;
+    height: 250px;
+  }
+  #contactBox form {
+    width: 90%;
+  }
+  .contactButtons {
+    width: 100px;
+  }
+  footer {
+    padding: 12px;
+    font-size: 0.75rem;
+  }
+}
